@@ -5,7 +5,7 @@ describe('Address Book', function(){
 		var newContact = new Contact();
 
 		addressBook.addContact(newContact);
-		
-		expect(addressBook.getContact(0).toBe(newContact));
+
+		expect(addressBook.getContact(0)).toBe(newContact);
 	});
 });
