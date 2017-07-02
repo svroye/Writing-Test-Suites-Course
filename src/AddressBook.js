@@ -1,15 +1,16 @@
 function AddressBook(){
 	this.contacts= [];
-	this.addContact = addNewContact;
-	this.getContact = getContactAtIndex;
 }
 
-
-function addNewContact(contact){
+AddressBook.prototype.addContact = function (contact){
 	this.contacts.push(contact);
 }
 
-function getContactAtIndex(index){
+AddressBook.prototype.getContact = function (index){
 	return this.contacts[index];
+}
+
+AddressBook.prototype.deleteContact = function (index){
+	this.contacts.splice(index,1);
 }
 
